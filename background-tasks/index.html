@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Tasks Demo</title>
+  <style>
+    #log {
+      padding: 5px;
+      overflow-y: auto;
+      width: 550px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Background Tasks API Demo</h2>
+  <p>
+    Use of cooperatively scheduled background tasks using <code>requestIdleCallback()</code> method.
+  </p>
+  <div id="container">
+    <div class="label">Building the cyborg...</div>
+    <progress id="progress" value="0"></progress>
+    <button class="button" id="startButton">Start</button>
+    <div class="label counter">
+      Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
+    </div>
+  </div>
+  <div id="logBox">
+    <div class="logHeader">Log</div>
+    <div id="log"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
