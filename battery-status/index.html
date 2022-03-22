@@ -6,22 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Battery status API</title>
   <style>
-    #log {
-      padding: 5px;
-      overflow-y: auto;
-      width: 550px;
-      height: 500px;
+    div {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <h2>Battery Status API Demo</h2>
   <div>
-    <span>Cyborg Battery Status:</span> <span id="status"></span>
-    <p>
-      <span>Level</span> <span id="level"></span>
-    </p>
-    <p><i>*Based on device battery chargin state</i></p>
+    <div>
+      <label>Cyborg Battery Status:</label> <span id="status"></span>  
+    </div>
+    <div>
+      <label>Level</label> <span id="level"></span>
+    </div>
+    <p><i>*Based on device's battery charging state</i></p>
   </div>
   <script src="main.js"></script>
 </body>

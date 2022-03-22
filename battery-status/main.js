@@ -2,9 +2,25 @@ let batteryStatusElement = document.getElementById('status');
 let levelElement = document.getElementById('level');
 
 navigator.getBattery().then(battery => {
+  const _RED = '#cc324c';
+  const _GREEN = '#b0dc4c';
+  const _YELLOW = '#ffe351';
+
   function updateValues(batteryInfo) {
-    batteryStatusElement.textContent = batteryInfo.charging ? 'Charging' : 'Not Charging';
-    levelElement.textContent = `${batteryInfo.level * 100}%`;
+    updateChargingStatus(batteryInfo.charging);
+
+    const level = batteryInfo.level * 100;
+    levelElement.textContent = `${level}%`;
+
+    if (level >= 75) {
+      levelElement.style.color = _GREEN;
+    }
+    if (level >= 50 || level < 75) {
+      levelElement.style.color = _GREEN;
+    }
+    if (level < 50) {
+      levelElement.style.color = _RED;
+    }
   }
 
   battery.addEventListener('chargingchange', (event) => {
@@ -16,4 +32,9 @@ navigator.getBattery().then(battery => {
   });
 
   updateValues(battery);
+
+  function updateChargingStatus(charging) {
+    batteryStatusElement.textContent = charging ? 'Charging': 'Not Charging';
+    batteryStatusElement.style.color = charging ? _GREEN : _YELLOW;
+  }
 })
