@@ -37,4 +37,4 @@ navigator.getBattery().then(battery => {
     batteryStatusElement.textContent = charging ? 'Charging': 'Not Charging';
     batteryStatusElement.style.color = charging ? _GREEN : _YELLOW;
   }
-})
+});
