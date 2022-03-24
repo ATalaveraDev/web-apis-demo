@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Styles Demo</title>
+  <style>
+    @counter-style hiragana {
+      system: alphabetic;
+      symbols: '\3042' '\3044' '\3046' '\3048' '\304A' '\304B' '\304D' '\304F' '\3051' '\3053' '\3055' '\3057' '\3059' '\305B' '\305D' '\305F' '\3061' '\3064' '\3066' '\3068' '\306A' '\306B' '\306C' '\306D' '\306E' '\306F' '\3072' '\3075' '\3078' '\307B' '\307E' '\307F' '\3080' '\3081' '\3082' '\3084' '\3086' '\3088' '\3089' '\308A' '\308B' '\308C' '\308D' '\308F' '\3090' '\3091' '\3092' '\3093';
+      /* symbols: あ い う え お か き く け こ さ し す せ そ た ち つ て と な に ぬ ね の は ひ ふ へ ほ ま み む め も や ゆ よ ら り る れ ろ わ ゐ ゑ を ん; */
+      suffix: '、';
+    }
+
+    .items {
+      list-style: hiragana;
+    }
+  </style>
+</head>
+<body>
+  <h2>Counter Styles Demo</h2>
+  <ul class="items">
+    <li>Japanese Manufacturer</li>
+    <li>Japanese Manufacturer</li>
+    <li>Japanese Manufacturer</li>
+  </ul>
+</body>
+</html>
